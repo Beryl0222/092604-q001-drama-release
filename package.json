@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "build": "node --check src/clock.js && node --check src/store.js && node --check src/service.js && node --check src/api.js && node --check src/cli.js",
+    "build": "for f in src/*.js; do node --check \"$f\"; done",
     "cli": "node src/cli.js"
   },
   "engines": {
